@@ -1,7 +1,7 @@
 // src/app/contact/page.tsx
 
 import Container from "@/components/container";
-import FeaturedPosts from "@/components/featuredPosts";
+
 // ... tambahkan import lain yang Anda butuhkan
 
 export default async function ContactPage() {
