@@ -1,27 +1,28 @@
-import { Metadata } from "next";
+// src/app/layout.tsx
+
+import type { Metadata } from "next";
 import "./globals.css";
-import { SessionProvider } from "next-auth/react";
+import Header from "@/components/header";
+import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Admin | My Blog",
-  description:
-    "Stay informed with product updates, company news, and insights on how to sell smarter at your company.",
+  title: "My - Blog",
+  description: "Stay informed with product updates, company news, and insights on how to sell smarter at your company.",
 };
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <head>
-        <link
-          rel="stylesheet"
-          href="https://api.fontshare.com/css?f%5B%5D=switzer@400,500,600,700&amp;display=swap"
-        />
-      </head>
+    <html lang="id">
       <body className="antialiased overflow-x-hidden">
-        <SessionProvider>{children}</SessionProvider>
+        <div className="flex flex-col min-h-screen">
+          <Header />
+          <main className="flex-grow">{children}</main>
+          <Footer />
+        </div>
       </body>
     </html>
   );

@@ -1,34 +1,44 @@
-import React from "react";
-import { Gradient } from "./gradient";
-import Container from "./container";
-import { Button } from "./button";
+import Container from './container'
 
 export default function Footer() {
   return (
-    <footer>
-      <Gradient className="relative">
-        <div className="absolute inset-2 rounded-4xl bg-white/80" />
-        <Container className="relative py-16 text-center sm:py-24">
-          <div>
-            <p className="font-mono text-xs/5 font-semibold uppercase tracking-widest text-gray-500">
-              Get started
+    <footer className="bg-gray-50 border-t border-gray-200">
+      <Container>
+        <div className="py-20 flex flex-col lg:flex-row items-center justify-between">
+          {/* Logo dan Slogan */}
+          <div className="flex flex-col items-center lg:items-start mb-8 lg:mb-0 lg:w-1/2">
+            <h3 className="text-4xl font-bold tracking-tighter leading-tight text-center lg:text-left">
+              Yajodoh
+            </h3>
+            <p className="text-lg text-gray-600 mt-2 text-center lg:text-left">
+              Bikin website jadi mudah.
             </p>
-            <p className="mx-auto mt-6 text-3xl text-gray-950 sm:text-5xl tracking-tight font-medium">
-              React to dive in ? <br />
-              Start your free trial today
-            </p>
-            <p className="mx-auto mt-6 max-w-xs text-sm/6 text-gray-500">
-              Get the cheat codes for selling and unlock your team&apos;s
-              revenue potential.
-            </p>
-            <div className="mt-6">
-              <Button className="w-full sm:w-auto" href="/login">
-                Get started
-              </Button>
-            </div>
           </div>
-        </Container>
-      </Gradient>
+
+          {/* Tombol Aksi */}
+          <div className="flex flex-col lg:flex-row justify-center items-center lg:w-1/2 lg:pl-4">
+            <a
+              href="#harga"
+              className="mx-3 bg-blue-700 hover:bg-blue-800 text-white font-bold py-3 px-12 lg:px-8 duration-200 transition-colors mb-6 lg:mb-0 rounded-full"
+            >
+              Lihat Paket Harga
+            </a>
+            <a
+              href="mailto:email@yajodoh.com"
+              className="mx-3 font-bold text-gray-700 hover:underline"
+            >
+              Hubungi Kami
+            </a>
+          </div>
+        </div>
+
+        {/* Hak Cipta */}
+        <div className="mt-8 pt-6 text-center border-t border-gray-200">
+          <p className="text-sm text-gray-500 mb-1">
+            © 2024 Ya Jodoh | All Rights Reserved.
+          </p>
+        </div>
+      </Container>
     </footer>
-  );
+  )
 }
