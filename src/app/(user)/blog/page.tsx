@@ -1,6 +1,6 @@
 // src/app/blog/page.tsx
 
-import Banner from "@/components/banner";
+
 import Categories from "@/components/categories";
 import Container from "@/components/container";
 import FeaturedPosts from "@/components/featuredPosts";
