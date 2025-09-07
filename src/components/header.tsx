@@ -159,7 +159,7 @@ export default function Header() {
               <Link href="/blog" onClick={toggleMenu} className="text-lg font-medium text-black hover:text-blue-600 transition duration-300">
                 Blog
               </Link>
-              <Link href="/Kontak" onClick={toggleMenu} className="text-lg font-medium text-black hover:text-blue-600 transition duration-300">
+              <Link href="/kontak" onClick={toggleMenu} className="text-lg font-medium text-black hover:text-blue-600 transition duration-300">
                 Kontak
               </Link>
               <Link href="/company" onClick={toggleMenu} className="text-lg font-medium text-black hover:text-blue-600 transition duration-300">
